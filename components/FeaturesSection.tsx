@@ -90,8 +90,8 @@ export default function FeaturesSection() {
                     Secure by default
                   </h2>
                   <p className="text-foreground">
-                    Provident fugit and vero voluptate. magnam magni doloribus
-                    dolores voluptates a sapiente nisi.
+                    Next-gen protection built into every interaction, reducing
+                    threats before they happen.
                   </p>
                 </div>
               </CardContent>
