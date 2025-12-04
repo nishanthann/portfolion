@@ -99,7 +99,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
 
 export const MarqueeDemo: React.FC = () => {
   return (
-    <div className="h-screen mt-17 mb-17">
+    <div className=" mt-17 mb-20">
       <TitleSection
         title="Words on the Streets!"
         badgeText="Coming Soon"

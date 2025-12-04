@@ -92,7 +92,7 @@ export default function HeroGeometric() {
   return (
     <div className="bg-background relative flex min-h-screen w-full items-center justify-center overflow-hidden dark:bg-black">
       <div className="from-primary/20 dark:from-primary/30 absolute inset-0 bg-linear-to-br via-transparent to-primary/20 blur-3xl dark:to-primary/30" />
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-visible">
         <ElegantShape
           delay={0.3}
           width={500}
@@ -182,7 +182,7 @@ export default function HeroGeometric() {
               <br />
               <span
                 className={cn(
-                  "p-4  text-4xl font-light tracking-tight sm:text-4xl md:text-4xl ",
+                  "p-4  text-2xl font-light tracking-tight sm:text-4xl md:text-4xl ",
                   "drop-shadow-[0_0_10px_rgba(251,191,36,0.7)]", // Amber glow
                   "hover:drop-shadow-[0_0_20px_rgba(251,191,36,0.9)]", // Hover effect
 
@@ -199,7 +199,7 @@ export default function HeroGeometric() {
             initial="hidden"
             animate="visible"
           >
-            <p className="text-muted-foreground mx-auto  mb-10 max-w-xl px-4 text-base leading-relaxed sm:text-lg md:text-xl !font-(--font-pacifico)!">
+            <p className="text-muted-foreground mx-auto  mb-10 max-w-xl px-4 text-base leading-relaxed sm:text-lg md:text-xl ">
               Hands-on experience in MERN stack, Next.js, and some React Native.
               Specializing in building modern, full-stack applications with
               scalable architecture and responsive UI.
