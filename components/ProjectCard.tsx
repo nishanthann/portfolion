@@ -86,13 +86,13 @@ export const ProjectCard = ({
 
         {/* Content */}
         <CardHeader>
-          <CardTitle className="text-m font-semibold line-clamp-1">
+          <CardTitle className="text-sm sm:text-m font-semibold line-clamp-1">
             {title}
           </CardTitle>
         </CardHeader>
 
         <CardContent className="-mt-7">
-          <p className="text-sm text-muted-foreground mb-4 line-clamp-4">
+          <p className="text-xs sm:text-sm text-muted-foreground mb-4 line-clamp-4">
             {description}
           </p>
 
@@ -102,7 +102,7 @@ export const ProjectCard = ({
               <Badge
                 key={t}
                 variant="outline"
-                className="text-[10px] py-1 px-2 rounded-full"
+                className="text-[8px] py-1 px-2 rounded-full"
               >
                 {t}
               </Badge>
