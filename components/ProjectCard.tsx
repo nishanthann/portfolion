@@ -97,7 +97,7 @@ export const ProjectCard = ({
           </p>
 
           {/* Tags */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-1">
             {tags.map((t) => (
               <Badge
                 key={t}

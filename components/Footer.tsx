@@ -27,13 +27,12 @@ export default function Footer() {
                 height={32}
                 className="rounded-full"
               />
-              <span className="text-2xl font-semibold">Mvpblocks</span>
+              <span className="text-2xl font-semibold">Nishanthan</span>
             </div>
 
             <p className="text-foreground/50  mt-6 max-w-md text-center leading-relaxed sm:max-w-xs sm:text-left">
-              Building beautiful and functional web experiences with modern
-              technologies. We help startups and businesses create their digital
-              presence.
+              Available for freelance work, collaborations, and new
+              opportunities.
             </p>
 
             <ul className="mt-8 flex justify-center gap-6 sm:justify-start md:gap-8">
@@ -99,8 +98,8 @@ export default function Footer() {
           {/* Column 2/3/4 combined in a grid */}
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2 ">
             {/* About Us Links */}
-            <div className="col-start-2 text-center sm:text-left">
-              <p className="text-lg font-medium">About Us</p>
+            <div className="sm:col-start-2 text-center sm:text-left">
+              <p className="text-lg font-medium">About Page</p>
               <ul className="mt-8 space-y-4 text-sm">
                 <li>
                   <Link
@@ -177,7 +176,7 @@ export default function Footer() {
             </div> */}
 
             {/* Helpful Links */}
-            <div className="text-center sm:text-left">
+            <div className="text-center sm:text-left hidden sm:block ">
               <p className="text-lg font-medium">Helpful Links</p>
               <ul className="mt-8 space-y-4 text-sm">
                 <li>
@@ -214,16 +213,16 @@ export default function Footer() {
 
             {/* Contact Us Info */}
             <div className="text-center sm:text-left">
-              <p className="text-lg font-medium">Contact Us</p>
+              <p className="text-lg font-medium">Contact Me</p>
               <ul className="mt-8 space-y-4 text-sm">
                 <li>
                   <a
                     className="flex items-center justify-center gap-1.5 sm:justify-start hover:text-primary transition"
-                    href="mailto:hello@mvpblocks.com"
+                    href="mailto:nizhanth23@gmail.com"
                   >
                     <Mail className="text-primary size-5 shrink-0 shadow-sm" />
                     <span className="text-secondary-foreground/70 flex-1 transition">
-                      hello@mvpblocks.com
+                      nizhanth23@gmail.com
                     </span>
                   </a>
                 </li>
@@ -234,7 +233,7 @@ export default function Footer() {
                   >
                     <Phone className="text-primary size-5 shrink-0 shadow-sm" />
                     <span className="text-secondary-foreground/70 flex-1 transition">
-                      +91 8637373116
+                      +94 772113037
                     </span>
                   </a>
                 </li>
@@ -247,7 +246,7 @@ export default function Footer() {
                   >
                     <MapPin className="text-primary size-5 shrink-0 shadow-sm" />
                     <address className="text-secondary-foreground/70 -mt-0.5 flex-1 not-italic transition">
-                      Kolkata, West Bengal, India
+                      Colombo, Srilanka
                     </address>
                   </a>
                 </li>
@@ -264,7 +263,7 @@ export default function Footer() {
             </p>
 
             <p className="text-secondary-foreground/70 mt-4 text-sm transition sm:order-first sm:mt-0">
-              © 2025 Mvpblocks
+              © 2025 Nishanthan Krishnarasa
             </p>
           </div>
         </div>
