@@ -35,14 +35,16 @@ export const ProjectCard = ({
     hover:-translate-y-1.5
   "
     >
-      <Card className="overflow-hidden relative rounded-2xl shadow-md hover:shadow-2xl transition-shadow h-[450px] ">
+      <Card className="overflow-hidden relative rounded-2xl shadow-md hover:shadow-2xl transition-shadow h-[350px] ">
         {/* Image */}
-        <div className="relative h-56 overflow-hidden -mt-6">
+        <div className="relative h-50 overflow-hidden -mt-6">
           <div className="absolute inset-0 " />
           <Image
             src={image}
             alt={title}
             fill
+            loading="eager"
+            quality="75"
             className="object-cover "
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
@@ -84,12 +86,12 @@ export const ProjectCard = ({
 
         {/* Content */}
         <CardHeader>
-          <CardTitle className="text-xl font-semibold line-clamp-1">
+          <CardTitle className="text-m font-semibold line-clamp-1">
             {title}
           </CardTitle>
         </CardHeader>
 
-        <CardContent className="-mt-5">
+        <CardContent className="-mt-7">
           <p className="text-sm text-muted-foreground mb-4 line-clamp-4">
             {description}
           </p>
@@ -100,7 +102,7 @@ export const ProjectCard = ({
               <Badge
                 key={t}
                 variant="outline"
-                className="text-xs py-1 px-2 rounded-full"
+                className="text-[10px] py-1 px-2 rounded-full"
               >
                 {t}
               </Badge>

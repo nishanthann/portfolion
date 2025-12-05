@@ -16,7 +16,7 @@ export default function Footer() {
   return (
     <footer className="bg-secondary dark:bg-secondary/20 mt-16 w-full place-self-end rounded-t-xl">
       <div className="mx-auto max-w-7xl px-4 pt-16 pb-6 sm:px-6 lg:px-8 lg:pt-24">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 ">
           {/* Column 1: Company Info and Social Links */}
           <div>
             <div className="text-primary flex justify-center gap-2 sm:justify-start">
@@ -97,9 +97,9 @@ export default function Footer() {
           </div>
 
           {/* Column 2/3/4 combined in a grid */}
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2 ">
             {/* About Us Links */}
-            <div className="text-center sm:text-left">
+            <div className="col-start-2 text-center sm:text-left">
               <p className="text-lg font-medium">About Us</p>
               <ul className="mt-8 space-y-4 text-sm">
                 <li>
@@ -138,7 +138,7 @@ export default function Footer() {
             </div>
 
             {/* Our Services Links */}
-            <div className="text-center sm:text-left">
+            {/* <div className="text-center sm:text-left">
               <p className="text-lg font-medium">Our Services</p>
               <ul className="mt-8 space-y-4 text-sm">
                 <li>
@@ -174,7 +174,7 @@ export default function Footer() {
                   </Link>
                 </li>
               </ul>
-            </div>
+            </div> */}
 
             {/* Helpful Links */}
             <div className="text-center sm:text-left">

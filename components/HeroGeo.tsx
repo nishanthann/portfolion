@@ -65,7 +65,7 @@ function ElegantShape({
             "absolute inset-0 rounded-full",
             "bg-linear-to-r to-transparent",
             gradient,
-            "border-2 border-white/80 backdrop-blur-[2px] dark:border-white/80",
+            "border-2 border-white/80 backdrop-blur-[2px] dark:border-none",
             "shadow-[0_8px_32px_0_rgba(255,255,255,0.4)] dark:shadow-[0_8px_32px_0_rgba(255,255,255,0.5)]",
             "after:absolute after:inset-0 after:rounded-full",
             "after:bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.6),transparent_70%)]",
@@ -91,7 +91,7 @@ export default function HeroGeometric() {
   };
   return (
     <div className="bg-background relative flex min-h-screen w-full items-center justify-center overflow-hidden dark:bg-black">
-      <div className="from-primary/20 dark:from-primary/30 absolute inset-0 bg-linear-to-br via-transparent to-primary/20 blur-3xl dark:to-primary/30" />
+      <div className="from-primary/20 dark:from-primary/20 absolute inset-0 bg-linear-to-br via-transparent to-primary/20 blur-3xl dark:to-primary/30" />
       <div className="absolute inset-0 overflow-visible">
         <ElegantShape
           delay={0.3}
@@ -149,9 +149,7 @@ export default function HeroGeometric() {
               <span className="bg-primary mr-2 rounded-full px-2 py-0.5 text-xs font-semibold text-white">
                 New
               </span>
-              <span className="text-muted-foreground">
-                Check out my works in action
-              </span>
+              <span className="text-muted-foreground">Check out my works</span>
               <ChevronRight className="text-muted-foreground ml-1 h-4 w-4" />
             </div>
           </motion.div>
@@ -170,7 +168,7 @@ export default function HeroGeometric() {
                 {`Hi, I'm `}
                 <span
                   className={cn(
-                    "p-4 text-amber-500 text-4xl font-light tracking-tight sm:text-4xl md:text-6xl ",
+                    "p-4 text-amber-500 text-4xl font-light tracking-tight sm:text-4xl md:text-6xl  ",
                     "drop-shadow-[0_0_10px_rgba(251,191,36,0.7)]", // Amber glow
                     "hover:drop-shadow-[0_0_20px_rgba(251,191,36,0.9)]", // Hover effect
                     quintessential.className
@@ -229,7 +227,7 @@ export default function HeroGeometric() {
           </motion.div>
         </div>
       </div>
-      <div className="from-background to-background/80 pointer-events-none absolute inset-0 bg-linear-to-t via-transparent dark:from-black dark:to-black/80" />
+      <div className="from-background to-background/80 pointer-events-none absolute inset-0 bg-linear-to-t via-transparent dark:from-black dark:to-black/90" />
     </div>
   );
 }

@@ -61,7 +61,7 @@ export const TitleSection: React.FC<TitleSectionProps> = ({
           <span
             className={cn(
               quintessential.className,
-              "text-primary drop-shadow-[0_0_10px_rgba(251,191,36,0.7)]"
+              "text-primary drop-shadow-[0_0_10px_rgba(251,191,36,0.7)] "
             )}
           >
             {lastWord}
