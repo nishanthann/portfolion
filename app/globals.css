@@ -162,9 +162,3 @@
   border-radius: 5px 0 0 5px; /* left rounded, right sharp */
   background-clip: content-box;
 }
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: var(--primary); /* keep the same color */
-  box-shadow: 0 0 8px var(--primary); /* glow effect */
-  border-radius: 5px 0 0 5px; /* maintain shape */
-}

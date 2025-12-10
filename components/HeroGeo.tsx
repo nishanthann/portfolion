@@ -91,7 +91,7 @@ export default function HeroGeometric() {
   };
   return (
     <div className="bg-background relative flex min-h-screen w-full items-center justify-center overflow-hidden dark:bg-black">
-      <div className="from-primary/20 dark:from-primary/20 absolute inset-0 bg-linear-to-br via-transparent to-primary/20 blur-3xl dark:to-primary/30" />
+      <div className="from-primary/20 dark:from-primary/10 absolute inset-0 bg-linear-to-br via-transparent to-primary/20 blur-4xl dark:to-primary/20" />
       <div className="absolute inset-0 overflow-visible">
         <ElegantShape
           delay={0.3}
@@ -99,7 +99,7 @@ export default function HeroGeometric() {
           height={80}
           rotate={12}
           gradient="from-indigo-500/70"
-          className="top-[15%] left-[-10%] md:top-[20%] md:left-[-5%] dark:hidden"
+          className="top-[15%] left-[-10%] md:top-[20%] md:left-[-5%] dark:hidden "
         />
         <ElegantShape
           delay={0.5}
@@ -107,7 +107,7 @@ export default function HeroGeometric() {
           height={80}
           rotate={-15}
           gradient="from-rose-400"
-          className="top-[70%] right-[-5%] md:top-[75%] md:right-[0%]"
+          className="top-[70%] right-[-5%] md:top-[75%] md:right-[0%] "
         />
         <ElegantShape
           delay={0.4}
@@ -115,7 +115,7 @@ export default function HeroGeometric() {
           height={80}
           rotate={-8}
           gradient="from-violet-400"
-          className="bottom-[5%] left-[5%] md:bottom-[10%] md:left-[10%]"
+          className="bottom-[5%] left-[5%] md:bottom-[10%] md:left-[10%] "
         />
         <ElegantShape
           delay={0.6}
@@ -131,7 +131,7 @@ export default function HeroGeometric() {
           height={40}
           rotate={-25}
           gradient="from-cyan-500/70 dark:from-cyan-400/90"
-          className="top-[5%] left-[20%] md:top-[10%] md:left-[25%]"
+          className="top-[5%] left-[20%] md:top-[10%] md:left-[25%] "
         />
       </div>
       <div className="relative z-10 container mx-auto max-w-6xl px-4 md:px-6">
@@ -170,7 +170,7 @@ export default function HeroGeometric() {
                   className={cn(
                     "p-4 text-amber-500 text-4xl font-light tracking-tight sm:text-4xl md:text-6xl  ",
                     "drop-shadow-[0_0_10px_rgba(251,191,36,0.7)]", // Amber glow
-                    "hover:drop-shadow-[0_0_20px_rgba(251,191,36,0.9)]", // Hover effect
+
                     quintessential.className
                   )}
                 >
@@ -181,8 +181,7 @@ export default function HeroGeometric() {
               <span
                 className={cn(
                   "p-4  text-2xl font-light tracking-tight sm:text-4xl md:text-4xl ",
-                  "drop-shadow-[0_0_10px_rgba(251,191,36,0.7)]", // Amber glow
-                  "hover:drop-shadow-[0_0_20px_rgba(251,191,36,0.9)]", // Hover effect
+                  // "drop-shadow-[0_0_10px_rgba(251,191,36,0.7)]", // Amber glow
 
                   quintessential.className
                 )}

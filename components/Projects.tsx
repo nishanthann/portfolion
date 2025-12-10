@@ -4,6 +4,17 @@ import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import { ProjectCard } from "./ProjectCard";
 import { TitleSection } from "./ui/TitleSection";
+import {
+  AuthJS,
+  BetterAuth,
+  Express,
+  MongoDB,
+  NextJs,
+  Node,
+  React,
+  Tailwind,
+  TypeScript,
+} from "./Icons";
 
 export const Projects = () => {
   const containerRef = useRef(null);
@@ -12,27 +23,40 @@ export const Projects = () => {
 
   const projects = [
     {
-      title: "AI SaaS Platform",
+      title: "Invoicer",
       description:
-        "A modern SaaS platform with real-time AI-powered content generation.",
-      image: "/ai-saas.png",
-      tags: ["Next.js", "OpenAI", "TailwindCSS"],
-      website: "https://example.com",
+        "Vehicle Booking Lite app enabling users to view, search, book, and manage vehicles through dashboard. CRUD operations (Create, Read, Update, Delete) for efficient booking.",
+      image: "/einvoicer.webp",
+      tags: [
+        { icon: <TypeScript className="w-4 h-4" /> },
+        { icon: <NextJs className="w-4 h-4" /> },
+        { icon: <AuthJS className="w-4 h-4" /> },
+
+        { icon: <Tailwind className="w-4 h-4" /> },
+      ],
+      website: "https://e-invoice-rho.vercel.app",
       github: "https://github.com/example",
     },
     {
       title: "Social Media Dashboard",
       description:
         "A dashboard for analytics, scheduling, and engagement tracking.",
-      image: "/social-media.png",
-      tags: ["React", "Node.js", "MongoDB"],
+      image: "/einvoicer.webp",
+      tags: [{ icon: <BetterAuth className="w-4 h-4" /> }],
     },
     {
-      title: "Productivity Timer",
+      title: "Go Rentals",
       description:
-        "A clean productivity timer with statistics tracking and dark mode.",
-      image: "/stopwatch.png",
-      tags: ["React", "TypeScript", "TailwindCSS"],
+        "Vehicle Booking Lite app enabling users to view, search, book, and manage vehicles through dashboard. CRUD operations (Create, Read, Update, Delete) for efficient booking.",
+      image: "/gorental.webp",
+      tags: [
+        { icon: <React className="w-4 h-4" /> },
+        { icon: <Node className="w-4 h-4" /> },
+        { icon: <Express className="w-4 h-4" /> },
+        { icon: <MongoDB className="w-4 h-4" /> },
+      ],
+      website: "https://go-rental-lyart.vercel.app/",
+      github: "https://github.com/nishanthann/go-rental",
     },
   ];
 
