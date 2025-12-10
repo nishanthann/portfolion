@@ -27,7 +27,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="w-full h-auto overflow-hidden dark:bg-black scroll-smooth">
+          <div className="w-full overflow-hidden   dark:bg-black scroll-smooth">
             {children}
           </div>
         </ThemeProvider>

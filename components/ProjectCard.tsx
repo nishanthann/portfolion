@@ -6,11 +6,16 @@ import { ExternalLink, Github } from "lucide-react";
 
 import Image from "next/image";
 
+export interface Tag {
+  label?: string;
+  icon: React.ReactNode;
+}
+
 export interface ProjectCardProps {
   title: string;
   description: string;
   image: string;
-  tags: string[];
+  tags: Tag[];
   website?: string;
   github?: string;
 }
@@ -37,7 +42,7 @@ export const ProjectCard = ({
     >
       <Card className="overflow-hidden relative rounded-2xl shadow-md hover:shadow-2xl transition-shadow h-[350px] ">
         {/* Image */}
-        <div className="relative h-50 overflow-hidden -mt-6">
+        <div className="relative h-52 overflow-hidden -mt-6">
           <div className="absolute inset-0 " />
           <Image
             src={image}
@@ -98,13 +103,14 @@ export const ProjectCard = ({
 
           {/* Tags */}
           <div className="flex flex-wrap gap-1">
-            {tags.map((t) => (
+            {tags.map((t, i) => (
               <Badge
-                key={t}
+                key={i}
                 variant="outline"
-                className="text-[8px] py-1 px-2 rounded-full"
+                className="text-[8px] py-1 px-1 rounded-full "
               >
-                {t}
+                <div>{t.icon}</div>
+                {t.label && <span>{t.label}</span>}
               </Badge>
             ))}
           </div>

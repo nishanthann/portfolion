@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 
 import {
+  AuthJS,
   BetterAuth,
   CoPilot,
   Css,
@@ -214,6 +215,15 @@ export function BadgeFormation() {
               <BetterAuth />
             </div>
             BetterAuth
+          </Badge>
+          <Badge
+            variant={"outline"}
+            className="text-[10px] px-2 py-0.5 md:text-sm md:px-3 md:py-1"
+          >
+            <div>
+              <AuthJS />
+            </div>
+            AuthJS
           </Badge>
           <Badge
             variant={"outline"}
