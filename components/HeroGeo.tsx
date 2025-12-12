@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import { Quintessential } from "next/font/google";
 import { cn } from "@/lib/utils";
-
+import Image from "next/image";
 const quintessential = Quintessential({
   subsets: ["latin"],
   weight: "400",
@@ -91,8 +91,17 @@ export default function HeroGeometric() {
   };
   return (
     <div className="bg-background relative flex min-h-screen w-full items-center justify-center overflow-hidden dark:bg-black">
-      <div className="from-primary/20 dark:from-primary/10 absolute inset-0 bg-linear-to-br via-transparent to-primary/20 blur-4xl dark:to-primary/20" />
-      <div className="absolute inset-0 overflow-visible">
+      <div className="from-primary/30 dark:from-primary/10  inset-0 bg-linear-to-br via-transparent to-primary/20 blur-4xl dark:to-primary/10" />
+      <div className="absolute inset-0">
+        <Image
+          src="/paperlast1.png"
+          alt="footer background"
+          fill
+          className="object-cover object-center dark:opacity-45 "
+          priority
+        />
+      </div>
+      {/* <div className="absolute inset-0 overflow-visible">
         <ElegantShape
           delay={0.3}
           width={500}
@@ -133,8 +142,8 @@ export default function HeroGeometric() {
           gradient="from-cyan-500/70 dark:from-cyan-400/90"
           className="top-[5%] left-[20%] md:top-[10%] md:left-[25%] "
         />
-      </div>
-      <div className="relative z-10 container mx-auto max-w-6xl px-4 md:px-6">
+      </div> */}
+      <div className="relative z-10 container mx-auto max-w-6xl mt-4 px-4 md:px-6">
         <div className="mx-auto max-w-3xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -159,7 +168,7 @@ export default function HeroGeometric() {
             initial="hidden"
             animate="visible"
           >
-            <h1 className="mx-4 mb-6 text-4xl font-light tracking-tight sm:text-6xl md:mb-8 md:text-6xl">
+            <h1 className="mx-4 mb-6 text-4xl font-light tracking-tight sm:text-6xl md:mb-8 md:text-5xl">
               <span
                 className={cn(
                   "from-foreground to-foreground/80 bg-linear-to-b bg-clip-text text-transparent"
@@ -168,7 +177,7 @@ export default function HeroGeometric() {
                 {`Hi, I'm `}
                 <span
                   className={cn(
-                    "p-4 text-amber-500 text-4xl font-light tracking-tight sm:text-4xl md:text-6xl  ",
+                    "p-4 dark:text-primary text-black text-4xl font-light tracking-tight sm:text-4xl md:text-5xl  ",
                     "drop-shadow-[0_0_10px_rgba(251,191,36,0.7)]", // Amber glow
 
                     quintessential.className
@@ -180,7 +189,7 @@ export default function HeroGeometric() {
               <br />
               <span
                 className={cn(
-                  "p-4  text-2xl font-light tracking-tight sm:text-4xl md:text-4xl ",
+                  "p-4  text-2xl font-light tracking-tight sm:text-4xl md:text-3xl ",
                   // "drop-shadow-[0_0_10px_rgba(251,191,36,0.7)]", // Amber glow
 
                   quintessential.className
@@ -196,7 +205,7 @@ export default function HeroGeometric() {
             initial="hidden"
             animate="visible"
           >
-            <p className="text-muted-foreground mx-auto  mb-10 max-w-xl px-4 text-base leading-relaxed sm:text-lg md:text-xl ">
+            <p className="text-muted-foreground mx-auto  mb-10 max-w-xl px-4 text-base leading-relaxed sm:text-lg md:text-l ">
               Hands-on experience in MERN stack, Next.js, and some React Native.
               Specializing in building modern, full-stack applications with
               scalable architecture and responsive UI.
