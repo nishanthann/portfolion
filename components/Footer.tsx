@@ -14,19 +14,22 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-secondary dark:bg-secondary/20 mt-16 w-full place-self-end rounded-t-xl">
+    <footer className="relative overflow-hidden bg-secondary dark:bg-secondary/20 mt-16 w-full place-self-end rounded-t-xl">
+      <div className="absolute inset-0">
+        <Image
+          src="/smokyb.png" // path inside public/
+          alt="footer background"
+          fill // makes the image fill the parent div
+          className="object-cover object-center invert dark:invert-0  opacity-30 " // adjust opacity and positioning
+          priority // optional, loads image faster
+        />
+      </div>
       <div className="mx-auto max-w-7xl px-4 pt-16 pb-6 sm:px-6 lg:px-8 lg:pt-24">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 ">
           {/* Column 1: Company Info and Social Links */}
           <div>
-            <div className="text-primary flex justify-center gap-2 sm:justify-start">
-              <Image
-                src="/nyellow.png"
-                alt="logo"
-                width={32}
-                height={32}
-                className="rounded-full"
-              />
+            <div className="flex justify-center gap-2 sm:justify-start">
+              <Image src="/nlogowhite.png" alt="logo" width={32} height={32} />
               <span className="text-2xl font-semibold">Nishanthan</span>
             </div>
 

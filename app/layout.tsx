@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { NavbarDemo } from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const outfit = Outfit({
   variable: "--font-geist-sans",
@@ -28,7 +30,14 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div className="w-full overflow-hidden   dark:bg-black scroll-smooth">
+            {/* --- NAVBAR HERE --- */}
+            <NavbarDemo />
+
+            {/* --- PAGE CONTENT HERE --- */}
             {children}
+
+            {/* --- FOOTER HERE --- */}
+            <Footer />
           </div>
         </ThemeProvider>
       </body>
