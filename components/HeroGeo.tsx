@@ -4,78 +4,13 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import { Quintessential } from "next/font/google";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
+
 const quintessential = Quintessential({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-quintessential",
 });
-function ElegantShape({
-  className,
-  delay = 0,
-  width = 400,
-  height = 100,
-  rotate = 0,
-  gradient = "from-white/[0.08]",
-}: {
-  className?: string;
-  delay?: number;
-  width?: number;
-  height?: number;
-  rotate?: number;
-  gradient?: string;
-}) {
-  return (
-    <motion.div
-      initial={{
-        opacity: 0,
-        y: -150,
-        rotate: rotate - 15,
-      }}
-      animate={{
-        opacity: 1,
-        y: 0,
-        rotate: rotate,
-      }}
-      transition={{
-        duration: 2.4,
-        delay,
-        ease: [0.23, 0.86, 0.39, 0.96],
-        opacity: { duration: 1.2 },
-      }}
-      className={cn("absolute", className)}
-    >
-      <motion.div
-        animate={{
-          y: [0, 15, 0],
-        }}
-        transition={{
-          duration: 12,
-          repeat: Number.POSITIVE_INFINITY,
-          ease: "easeInOut",
-        }}
-        style={{
-          width,
-          height,
-        }}
-        className="relative"
-      >
-        <div
-          className={cn(
-            "absolute inset-0 rounded-full",
-            "bg-linear-to-r to-transparent",
-            gradient,
-            "border-2 border-white/80 backdrop-blur-[2px] dark:border-none",
-            "shadow-[0_8px_32px_0_rgba(255,255,255,0.4)] dark:shadow-[0_8px_32px_0_rgba(255,255,255,0.5)]",
-            "after:absolute after:inset-0 after:rounded-full",
-            "after:bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.6),transparent_70%)]",
-            "dark:after:bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.7),transparent_70%)]"
-          )}
-        />
-      </motion.div>
-    </motion.div>
-  );
-}
+
 export default function HeroGeometric() {
   const fadeUpVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -90,60 +25,8 @@ export default function HeroGeometric() {
     }),
   };
   return (
-    <div className="bg-background relative flex min-h-screen w-full items-center justify-center overflow-hidden dark:bg-black">
-      <div className="from-primary/30 dark:from-primary/10  inset-0 bg-linear-to-br via-transparent to-primary/20 blur-4xl dark:to-primary/10" />
-      <div className="absolute inset-0">
-        <Image
-          src="/paperlast1.png"
-          alt="footer background"
-          fill
-          className="object-cover object-center dark:opacity-45 "
-          priority
-        />
-      </div>
-      {/* <div className="absolute inset-0 overflow-visible">
-        <ElegantShape
-          delay={0.3}
-          width={500}
-          height={80}
-          rotate={12}
-          gradient="from-indigo-500/70"
-          className="top-[15%] left-[-10%] md:top-[20%] md:left-[-5%] dark:hidden "
-        />
-        <ElegantShape
-          delay={0.5}
-          width={500}
-          height={80}
-          rotate={-15}
-          gradient="from-rose-400"
-          className="top-[70%] right-[-5%] md:top-[75%] md:right-[0%] "
-        />
-        <ElegantShape
-          delay={0.4}
-          width={300}
-          height={80}
-          rotate={-8}
-          gradient="from-violet-400"
-          className="bottom-[5%] left-[5%] md:bottom-[10%] md:left-[10%] "
-        />
-        <ElegantShape
-          delay={0.6}
-          width={200}
-          height={60}
-          rotate={20}
-          gradient="from-amber-500/70 dark:from-amber-400/90"
-          className="top-[10%] right-[15%] md:top-[15%] md:right-[20%]"
-        />
-        <ElegantShape
-          delay={0.7}
-          width={150}
-          height={40}
-          rotate={-25}
-          gradient="from-cyan-500/70 dark:from-cyan-400/90"
-          className="top-[5%] left-[20%] md:top-[10%] md:left-[25%] "
-        />
-      </div> */}
-      <div className="relative z-10 container mx-auto max-w-6xl mt-4 px-4 md:px-6">
+    <div className=" flex min-h-screen w-full items-center justify-center overflow-hidden ">
+      <div className="  container mx-auto max-w-6xl  px-4 md:px-6">
         <div className="mx-auto max-w-3xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -168,16 +51,16 @@ export default function HeroGeometric() {
             initial="hidden"
             animate="visible"
           >
-            <h1 className="mx-4 mb-6 text-4xl font-light tracking-tight sm:text-6xl md:mb-8 md:text-5xl">
+            <h1 className="mx-4 mb-6 text-4xl font-light tracking-tight sm:text-6xl md:mb-8 md:text-[40px]">
               <span
                 className={cn(
                   "from-foreground to-foreground/80 bg-linear-to-b bg-clip-text text-transparent"
                 )}
               >
-                {`Hi, I'm `}
+                <span>{`Hi, I'm `}</span>
                 <span
                   className={cn(
-                    "p-4 dark:text-primary text-black text-4xl font-light tracking-tight sm:text-4xl md:text-5xl  ",
+                    "p-4 dark:text-primary text-black text-4xl font-light tracking-tight sm:text-4xl md:text-[40px]  ",
                     "drop-shadow-[0_0_10px_rgba(251,191,36,0.7)]", // Amber glow
 
                     quintessential.className
@@ -189,7 +72,7 @@ export default function HeroGeometric() {
               <br />
               <span
                 className={cn(
-                  "p-4  text-2xl font-light tracking-tight sm:text-4xl md:text-3xl ",
+                  "p-4  text-2xl font-light tracking-tight sm:text-3xl md:text-2xl ",
                   // "drop-shadow-[0_0_10px_rgba(251,191,36,0.7)]", // Amber glow
 
                   quintessential.className
@@ -235,7 +118,6 @@ export default function HeroGeometric() {
           </motion.div>
         </div>
       </div>
-      <div className="from-background to-background/80 pointer-events-none absolute inset-0 bg-linear-to-t via-transparent dark:from-black dark:to-black/90" />
     </div>
   );
 }

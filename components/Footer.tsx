@@ -14,16 +14,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-secondary dark:bg-secondary/20 mt-16 w-full place-self-end rounded-t-xl">
-      <div className="absolute inset-0">
-        <Image
-          src="/smokyb.png" // path inside public/
-          alt="footer background"
-          fill // makes the image fill the parent div
-          className="object-cover object-center invert dark:invert-0  opacity-30 " // adjust opacity and positioning
-          priority // optional, loads image faster
-        />
-      </div>
+    <footer className=" bg-secondary dark:bg-secondary/20 mt-16 w-full place-self-end rounded-t-xl">
       <div className="mx-auto max-w-7xl px-4 pt-16 pb-6 sm:px-6 lg:px-8 lg:pt-24">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 ">
           {/* Column 1: Company Info and Social Links */}
@@ -223,7 +214,7 @@ export default function Footer() {
                     className="flex items-center justify-center gap-1.5 sm:justify-start hover:text-primary transition"
                     href="mailto:nizhanth23@gmail.com"
                   >
-                    <Mail className="text-primary size-5 shrink-0 shadow-sm" />
+                    <Mail className="text-primary size-5 shrink-0 " />
                     <span className="text-secondary-foreground/70 flex-1 transition">
                       nizhanth23@gmail.com
                     </span>
@@ -234,7 +225,7 @@ export default function Footer() {
                     className="flex items-center justify-center gap-1.5 sm:justify-start hover:text-primary transition"
                     href="tel:+918637373116"
                   >
-                    <Phone className="text-primary size-5 shrink-0 shadow-sm" />
+                    <Phone className="text-primary size-5 shrink-0 " />
                     <span className="text-secondary-foreground/70 flex-1 transition">
                       +94 772113037
                     </span>
@@ -247,7 +238,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <MapPin className="text-primary size-5 shrink-0 shadow-sm" />
+                    <MapPin className="text-primary size-5 shrink-0 " />
                     <address className="text-secondary-foreground/70 -mt-0.5 flex-1 not-italic transition">
                       Colombo, Srilanka
                     </address>
