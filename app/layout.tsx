@@ -4,6 +4,8 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { NavbarDemo } from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Image from "next/image";
+import { Toaster } from "sonner";
 
 const outfit = Outfit({
   variable: "--font-geist-sans",
@@ -29,16 +31,31 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="w-full overflow-hidden   dark:bg-black scroll-smooth">
+          <div className="w-full overflow-hidden relative  dark:bg-black scroll-smooth ">
             {/* --- NAVBAR HERE --- */}
             <NavbarDemo />
+            <div className="absolute max-h-screen inset-0 pointer-events-none">
+              <Image
+                src="/paperlast1.png"
+                alt="footer background"
+                fill
+                className="object-cover  dark:opacity-45"
+                priority
+              />
+            </div>
+            <div className=" max-h-screen from-background to-background/80 pointer-events-none absolute from-10%  inset-0 bg-linear-to-t via-transparent dark:from-black dark:to-black" />
 
             {/* --- PAGE CONTENT HERE --- */}
-            {children}
+            <div className="relative z-10">
+              {children}
 
-            {/* --- FOOTER HERE --- */}
-            <Footer />
+              {/* --- FOOTER HERE --- */}
+              <Footer />
+            </div>
           </div>
+          <Toaster
+            richColors // optional: allows custom colors per theme
+          />
         </ThemeProvider>
       </body>
     </html>

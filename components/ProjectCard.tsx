@@ -48,7 +48,6 @@ export const ProjectCard = ({
             src={image}
             alt={title}
             fill
-            loading="eager"
             quality="75"
             className="object-cover "
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -96,8 +95,8 @@ export const ProjectCard = ({
           </CardTitle>
         </CardHeader>
 
-        <CardContent className="-mt-7">
-          <p className="text-xs sm:text-sm text-muted-foreground mb-4 line-clamp-4">
+        <CardContent className="-mt-7 px-2 sm:px-6">
+          <p className="text-s sm:text-sm text-muted-foreground mb-4 line-clamp-4">
             {description}
           </p>
 

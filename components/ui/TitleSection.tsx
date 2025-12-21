@@ -17,6 +17,8 @@ interface TitleSectionProps {
   descriptionClassName?: string;
   badgeText?: string; // Optional badge text
   badgeIcon?: React.ReactNode; // Optional icon inside badge
+  transitionDuration?: number;
+  animate?: boolean; // 👈 default ON
 }
 
 export const TitleSection: React.FC<TitleSectionProps> = ({
@@ -26,11 +28,15 @@ export const TitleSection: React.FC<TitleSectionProps> = ({
   descriptionClassName,
   badgeText,
   badgeIcon,
+  transitionDuration = 0.5,
+  animate = true, // 👈 default ON
 }) => {
-  // split by whitespace, handle extra spaces
   const parts = title?.trim().split(/\s+/) || [];
   const lastWord = parts.length > 0 ? parts[parts.length - 1] : "";
   const head = parts.length > 1 ? parts.slice(0, -1).join(" ") : "";
+
+  // 👇 choose wrapper
+  const Wrapper = animate ? motion.div : "div";
 
   return (
     <div
@@ -39,7 +45,6 @@ export const TitleSection: React.FC<TitleSectionProps> = ({
         className
       )}
     >
-      {/* Optional Badge / Top Label */}
       {badgeText && (
         <div className="mb-4 flex justify-center">
           <Badge className="border-primary/20 bg-primary/5 rounded-full px-4 py-1 text-sm font-medium flex items-center gap-1">
@@ -49,26 +54,26 @@ export const TitleSection: React.FC<TitleSectionProps> = ({
         </div>
       )}
 
-      {/* Title */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ margin: "-100px" }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+      <Wrapper
+        {...(animate && {
+          initial: { opacity: 0, y: 40 },
+          whileInView: { opacity: 1, y: 0 },
+          viewport: { margin: "-100px" },
+          transition: { duration: transitionDuration, ease: "easeOut" },
+        })}
       >
         <h1 className="mx-4 mb-6 text-3xl font-light tracking-tight sm:text-5xl md:mb-8 md:text-5xl">
-          <span> {head && <span>{head} </span>} </span>
+          {head && <span>{head} </span>}
           <span
             className={cn(
               quintessential.className,
-              "text-primary drop-shadow-[0_0_10px_rgba(251,191,36,0.7)] "
+              "text-primary drop-shadow-[0_0_10px_rgba(251,191,36,0.7)]"
             )}
           >
             {lastWord}
           </span>
         </h1>
 
-        {/* Optional Description */}
         {description && (
           <p
             className={cn(
@@ -79,7 +84,7 @@ export const TitleSection: React.FC<TitleSectionProps> = ({
             {description}
           </p>
         )}
-      </motion.div>
+      </Wrapper>
     </div>
   );
 };
