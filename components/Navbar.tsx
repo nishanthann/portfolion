@@ -13,6 +13,7 @@ import {
 import { useState } from "react";
 import { ModeToggle } from "./ModeToggle";
 import Link from "next/link";
+import { BookCallButton } from "./Booking";
 
 export function NavbarDemo() {
   const navItems = [
@@ -25,8 +26,8 @@ export function NavbarDemo() {
       link: "/blogs",
     },
     {
-      name: "Contact",
-      link: "#contact",
+      name: "More",
+      link: "/comments",
     },
   ];
 
@@ -43,7 +44,7 @@ export function NavbarDemo() {
             <ModeToggle />
           </NavbarButton>
 
-          <NavbarButton variant="primary">Book a call</NavbarButton>
+          <BookCallButton />
         </div>
       </NavBody>
 
@@ -77,13 +78,10 @@ export function NavbarDemo() {
             </Link>
           ))}
           <div className="flex w-full flex-col gap-4">
-            <NavbarButton
-              onClick={() => setIsMobileMenuOpen(false)}
-              variant="primary"
+            <BookCallButton
               className="w-full"
-            >
-              Book a call
-            </NavbarButton>
+              onClick={() => setIsMobileMenuOpen(false)}
+            />
           </div>
         </MobileNavMenu>
       </MobileNav>
