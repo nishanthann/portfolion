@@ -24,11 +24,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${outfit.variable}  antialiased`}>
+      <body className={`${outfit.className}  antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
-          enableSystem
           disableTransitionOnChange
         >
           <div className="w-full overflow-hidden relative  dark:bg-black scroll-smooth ">

@@ -8,12 +8,13 @@ import { Projects } from "@/components/Projects";
 import { BadgeFormation } from "@/components/Tools";
 
 import CTA2 from "@/components/GetInTouch";
+import AboutSection from "@/components/AboutSection";
 
 export default function GradientHero() {
   return (
     <>
       <HeroGeometric />
-
+      <AboutSection />
       <FeaturesSection />
       <Projects />
       <BadgeFormation />

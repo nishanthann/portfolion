@@ -60,7 +60,7 @@ export const ProjectCard = ({
                 target="_blank"
                 className="
                             p-2 rounded-full 
-                            bg-neutral-200/80 dark:bg-neutral-800/60
+                            bg-neutral-200/80 dark:bg-primary
                             hover:bg-primary/30 
                             backdrop-blur-md 
                             transition

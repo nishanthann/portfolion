@@ -4,34 +4,22 @@ import { Trash2 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 
-type Comment = {
-  id: string;
-  userId: string;
-};
-
-type Session = {
-  user?: {
-    id: string;
-    name?: string | null;
-    email?: string | null;
-    image?: string | null;
-  };
-} | null;
-
 export default function DeleteCommentButton({
-  comment,
-  session,
+  commentId,
+  ownerId,
+  currentUserId,
 }: {
-  comment: Comment;
-  session: Session;
+  commentId: string;
+  ownerId: string;
+  currentUserId: string | null;
 }) {
   const router = useRouter();
 
-  // Only show the delete button if the logged-in user owns the comment
-  if (!session?.user?.id || session.user.id !== comment.userId) return null;
+  // permission check
+  if (!currentUserId || currentUserId !== ownerId) return null;
 
   const handleDelete = async () => {
-    const res = await fetch(`/api/comments/${comment.id}`, {
+    const res = await fetch(`/api/comments/${commentId}`, {
       method: "DELETE",
     });
 
@@ -39,8 +27,9 @@ export default function DeleteCommentButton({
       toast.error("Failed to delete comment");
       return;
     }
-    toast.success("Comment deleted successfully");
-    router.refresh(); // Refresh the server component
+
+    toast.success("Comment deleted");
+    router.refresh();
   };
 
   return (

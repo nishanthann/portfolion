@@ -1,9 +1,16 @@
 "use client";
 import { easeInOut, motion } from "motion/react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, ChevronRight } from "lucide-react";
+import {
+  ArrowDown,
+  ArrowRight,
+  ChevronRight,
+  Github,
+  Linkedin,
+} from "lucide-react";
 import { Quintessential } from "next/font/google";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 const quintessential = Quintessential({
   subsets: ["latin"],
@@ -102,19 +109,54 @@ export default function HeroGeometric() {
             className="flex flex-col justify-center gap-4 sm:flex-row"
           >
             <Button
-              size="lg"
-              className="from-primary shadow-primary/10 hover:from-primary/90 rounded-full text-black border-none bg-linear-to-r to-primary shadow-md hover:to-primary/90"
+              size="sm"
+              className="from-primary group shadow-primary/10 hover:from-primary/90 rounded-full text-black border-none bg-linear-to-r to-primary shadow-md hover:to-primary/90"
             >
               Get Started
-              <ArrowRight className="ml-2 h-4 w-4" />
+              <ArrowRight className=" h-4 w-4 transition-transform duration-300 -translate-x-0.5 group-hover:translate-x-0.5" />
             </Button>
             <Button
-              size="lg"
+              size="sm"
               variant="outline"
-              className="border-primary/30 hover:bg-primary/5 rounded-full shadow-sm"
+              className="border-primary/30 hover:bg-primary/5 rounded-full shadow-sm  group"
             >
-              View Components
+              <Link
+                href="/cv.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
+              >
+                Download CV
+                <ArrowDown
+                  size={18}
+                  className="transition-transform duration-300 -translate-y-0.5 group-hover:translate-y-0.5"
+                />
+              </Link>
             </Button>
+          </motion.div>
+          <motion.div
+            custom={3}
+            variants={fadeUpVariants}
+            initial="hidden"
+            animate="visible"
+            className=" mt-6 flex justify-center gap-4 sm:mr-4"
+          >
+            <a
+              href="https://github.com/yourusername"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-amber-500 transition-colors"
+            >
+              <Github size={20} />
+            </a>
+            <a
+              href="https://linkedin.com/in/yourusername"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-amber-500 transition-colors"
+            >
+              <Linkedin size={20} />
+            </a>
           </motion.div>
         </div>
       </div>
