@@ -155,6 +155,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
     </motion.div>
   );
 };
+
 export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
   return (
     <motion.div
