@@ -243,10 +243,16 @@ export const NavbarLogo = () => {
   return (
     <Link
       href="/"
-      className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
+      className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black scale-110 hover:scale-120 transition-all duration-300"
     >
-      <Image src="/nlogowhite.png" alt="logo" width={30} height={30} />
-      <span className="font-medium text-black dark:text-white">Startup</span>
+      <Image
+        src="/nlogowhite.png"
+        alt="logo"
+        width={40}
+        height={40}
+        loading="eager"
+        className="dark:invert"
+      />
     </Link>
   );
 };
