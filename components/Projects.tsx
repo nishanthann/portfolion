@@ -8,6 +8,7 @@ import {
   AuthJS,
   BetterAuth,
   Express,
+  Framer,
   MongoDB,
   NextJs,
   Node,
@@ -15,6 +16,8 @@ import {
   Tailwind,
   TypeScript,
 } from "./Icons";
+import Link from "next/link";
+import { ChevronsRight } from "lucide-react";
 
 export const Projects = () => {
   const containerRef = useRef(null);
@@ -38,11 +41,18 @@ export const Projects = () => {
       github: "https://github.com/example",
     },
     {
-      title: "Social Media Dashboard",
+      title: "Nextus LMS",
       description:
-        "A dashboard for analytics, scheduling, and engagement tracking.",
-      image: "/einvoicer.webp",
-      tags: [{ icon: <BetterAuth className="w-4 h-4" /> }],
+        "Lightweight Learning Management System with admin/user dashboards, Stripe payments, drag-and-drop course builder, file uploads, and server actions. Built for modern education platforms.",
+      image: "/lms.webp",
+      tags: [
+        { icon: <NextJs className="w-4 h-4" /> },
+        { icon: <TypeScript className="w-4 h-4" /> },
+        { icon: <BetterAuth className="w-4 h-4" /> },
+        { icon: <Tailwind className="w-4 h-4" /> },
+      ],
+      website: "https://lms-nextjs-theta.vercel.app/",
+      github: "https://github.com/yourusername/learnflow-lms",
     },
     {
       title: "Go Rentals",
@@ -57,6 +67,19 @@ export const Projects = () => {
       ],
       website: "https://go-rental-lyart.vercel.app/",
       github: "https://github.com/nishanthann/go-rental",
+    },
+    {
+      title: "Bridal Beauty Suite",
+      description:
+        "Comprehensive bridal makeup booking platform featuring artist portfolios, trial scheduling, package customization, and real-time availability management for seamless wedding preparations.",
+      image: "/sh.webp",
+      tags: [
+        { icon: <NextJs className="w-4 h-4" /> },
+        { icon: <Tailwind className="w-4 h-4" /> },
+        { icon: <Framer className="w-4 h-4" /> },
+      ],
+      website: "https://shbridalmakeover.com/",
+      github: "https://github.com/yourusername/bridal-beauty-suite",
     },
   ];
 
@@ -106,6 +129,15 @@ export const Projects = () => {
           </motion.div>
         ))}
       </motion.div>
+      <div className="text-center mt-14">
+        <Link
+          href="/projects"
+          className="inline-flex justify-center items-center gap-1 text-lg text-primary hover:text-primary/80 transition-colors group"
+        >
+          View all projects
+          <ChevronsRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+        </Link>
+      </div>
     </section>
   );
 };

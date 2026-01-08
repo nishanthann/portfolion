@@ -1,13 +1,7 @@
 "use client";
 import { easeInOut, motion } from "motion/react";
 import { Button } from "@/components/ui/button";
-import {
-  ArrowDown,
-  ArrowRight,
-  ChevronRight,
-  Github,
-  Linkedin,
-} from "lucide-react";
+import { ArrowDown, ChevronRight, Github, Globe, Linkedin } from "lucide-react";
 import { Quintessential } from "next/font/google";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -108,17 +102,20 @@ export default function HeroGeometric() {
             animate="visible"
             className="flex flex-col justify-center gap-4 sm:flex-row"
           >
-            <Button
-              size="sm"
-              className="from-primary group shadow-primary/10 hover:from-primary/90 rounded-full text-black border-none bg-linear-to-r to-primary shadow-md hover:to-primary/90"
-            >
-              Get Started
-              <ArrowRight className=" h-4 w-4 transition-transform duration-300 -translate-x-0.5 group-hover:translate-x-0.5" />
-            </Button>
+            <a href="mailto:nizhanth23@gmail.com.com">
+              <Button
+                size="sm"
+                className="cursor-pointer from-primary group shadow-primary/10 hover:from-primary/90 rounded-full text-black border-none bg-linear-to-r to-primary shadow-md hover:to-primary/90"
+              >
+                Hire me
+                <Globe className=" h-4 w-4 animate-spin" />
+              </Button>
+            </a>
             <Button
               size="sm"
               variant="outline"
               className="border-primary/30 hover:bg-primary/5 rounded-full shadow-sm  group"
+              asChild
             >
               <Link
                 href="/cv.pdf"
@@ -142,7 +139,7 @@ export default function HeroGeometric() {
             className=" mt-6 flex justify-center gap-4 sm:mr-4"
           >
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/nishanthann"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-amber-500 transition-colors"
