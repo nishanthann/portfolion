@@ -5,6 +5,7 @@ import {
   BetterAuth,
   CoPilot,
   Css,
+  Docker,
   Express,
   Framer,
   Git,
@@ -186,8 +187,39 @@ export function BadgeFormation() {
             Prisma
           </Badge>
         </div>
+
+        {/* Row 6 */}
+        <div className="flex sm:hidden  gap-3 translate-x-0 sm:translate-x-3">
+          <Badge
+            variant={"outline"}
+            className="text-[10px] px-2 py-0.5 md:text-sm md:px-3 md:py-1"
+          >
+            <div>
+              <Zod />
+            </div>
+            Zod
+          </Badge>
+          <Badge
+            variant={"outline"}
+            className="text-[10px] px-2 py-0.5 md:text-sm md:px-3 md:py-1"
+          >
+            <div>
+              <Mui />
+            </div>
+            MUI
+          </Badge>
+          <Badge
+            variant={"outline"}
+            className="flex sm:hidden text-[10px] px-2 py-0.5 md:text-sm md:px-3 md:py-1"
+          >
+            <div>
+              <Framer />
+            </div>
+            Framer Motion
+          </Badge>
+        </div>
         {/* Row 4 */}
-        <div className="flex gap-3 translate-x-0 sm:translate-x-3">
+        <div className="flex gap-3 translate-x-0 sm:translate-x-2">
           <Badge
             variant={"outline"}
             className="text-[10px] px-2 py-0.5 md:text-sm md:px-3 md:py-1"
@@ -225,24 +257,7 @@ export function BadgeFormation() {
             </div>
             AuthJS
           </Badge>
-          <Badge
-            variant={"outline"}
-            className="text-[10px] px-2 py-0.5 md:text-sm md:px-3 md:py-1"
-          >
-            <div>
-              <Postman />
-            </div>
-            Postman
-          </Badge>
-          <Badge
-            variant={"outline"}
-            className="hidden sm:inline-flex text-[10px] px-2 py-0.5 md:text-sm md:px-3 md:py-1"
-          >
-            <div>
-              <Framer />
-            </div>
-            Framer Motion
-          </Badge>
+
           <Badge
             variant={"outline"}
             className="hidden sm:inline-flex text-[10px] px-2 py-0.5 md:text-sm md:px-3 md:py-1"
@@ -254,7 +269,7 @@ export function BadgeFormation() {
           </Badge>
         </div>
         {/* Row 5 */}
-        <div className="flex gap-3 translate-x-0 sm:translate-x-6">
+        <div className="flex gap-3 translate-x-0 sm:translate-x-4">
           <Badge
             variant={"outline"}
             className="text-[10px] px-2 py-0.5 md:text-sm md:px-3 md:py-1"
@@ -282,6 +297,36 @@ export function BadgeFormation() {
             </div>
             CoPilot
           </Badge>
+        </div>
+        {/* Row 6 */}
+        <div className="flex gap-3 translate-x-0 sm:translate-x-3">
+          <Badge
+            variant={"outline"}
+            className="text-[10px] px-2 py-0.5 md:text-sm md:px-3 md:py-1"
+          >
+            <div>
+              <Docker />
+            </div>
+            Docker
+          </Badge>
+          <Badge
+            variant={"outline"}
+            className="text-[10px] px-2 py-0.5 md:text-sm md:px-3 md:py-1"
+          >
+            <div>
+              <Postman />
+            </div>
+            Postman
+          </Badge>
+          <Badge
+            variant={"outline"}
+            className="hidden sm:inline-flex text-[10px] px-2 py-0.5 md:text-sm md:px-3 md:py-1"
+          >
+            <div>
+              <Framer />
+            </div>
+            Framer Motion
+          </Badge>
           <Badge
             variant={"outline"}
             className="text-[10px] px-2 py-0.5 md:text-sm md:px-3 md:py-1"
@@ -293,7 +338,7 @@ export function BadgeFormation() {
           </Badge>
         </div>
 
-        {/* Row 6 */}
+        {/* Row 7 */}
         <div className="flex gap-3 translate-x-0 sm:translate-x-1">
           <Badge
             variant={"outline"}
